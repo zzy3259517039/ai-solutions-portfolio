@@ -1,0 +1,21 @@
+{
+  "evidence_kind": "manually_transcribed_platform_run_record",
+  "project": "客户咨询分流工作流",
+  "observed_on": "2026-10-12",
+  "run_at_displayed": "2026-10-06 00:19:44",
+  "run_timestamp_note": "按平台界面显示记录，未独立确认该记录的时区",
+  "duration_seconds_displayed": 3.3,
+  "input": { "user_message": "请查询 TEST001 的面料" },
+  "output": {
+    "intent": "商品咨询",
+    "reply": "这款TEST001商品是测试棉质短袖，面料为100%棉。",
+    "need_human": false
+  },
+  "data_source": "product_lookup_tool.py 中的 TEST001 模拟商品资料",
+  "limits": [
+    "历史单次记录，本轮没有重新调用云端模型",
+    "不代表全部分支验收通过",
+    "没有接入真实店铺商品或订单数据",
+    "整理时省略账号、项目资源标识和 TraceId"
+  ]
+}

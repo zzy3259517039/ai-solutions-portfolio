@@ -1,0 +1,53 @@
+{
+  "checked_on": "2026-10-12",
+  "scope": "offline mock product lookup only",
+  "passed": 5,
+  "total": 5,
+  "cases": [
+    {
+      "input": "TEST001",
+      "output": {
+        "status": "found",
+        "product_id": "TEST001",
+        "product_info": "商品名称：测试棉质短袖；面料：100%棉"
+      },
+      "passed": true
+    },
+    {
+      "input": "TEST002",
+      "output": {
+        "status": "found",
+        "product_id": "TEST002",
+        "product_info": "商品名称：测试针织开衫；面料：80%棉、20%聚酯纤维"
+      },
+      "passed": true
+    },
+    {
+      "input": " test001 ",
+      "output": {
+        "status": "found",
+        "product_id": "TEST001",
+        "product_info": "商品名称：测试棉质短袖；面料：100%棉"
+      },
+      "passed": true
+    },
+    {
+      "input": "TEST999",
+      "output": {
+        "status": "not_found",
+        "product_id": "TEST999",
+        "message": "未找到商品"
+      },
+      "passed": true
+    },
+    {
+      "input": "",
+      "output": {
+        "status": "not_found",
+        "product_id": "",
+        "message": "未找到商品"
+      },
+      "passed": true
+    }
+  ]
+}
