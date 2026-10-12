@@ -1,0 +1,11 @@
+.page { padding: 72rpx 40rpx; }
+.badge { display: inline-block; padding: 10rpx 18rpx; border-radius: 999rpx; color: #087c56; background: #dcefe6; font-size: 22rpx; font-weight: bold; }
+.title { margin-top: 44rpx; font-size: 48rpx; font-weight: bold; }
+.subtitle { margin-top: 14rpx; color: #6b8179; font-size: 28rpx; }
+.card { margin-top: 64rpx; padding: 36rpx; border-radius: 24rpx; background: #fff; }
+.card-title { font-size: 32rpx; font-weight: bold; }
+.card-text { margin-top: 20rpx; color: #527068; font-size: 26rpx; line-height: 1.8; }
+.login-button { margin-top: 36rpx; background: #087c56; color: #fff; border-radius: 16rpx; font-size: 30rpx; }
+.login-status { margin-top: 24rpx; color: #527068; font-size: 26rpx; }
+.openid { margin-top: 20rpx; padding: 20rpx; word-break: break-all; border-radius: 12rpx; background: #eaf4ee; color: #075f44; font-size: 24rpx; }
+.store-input { margin-top: 26rpx; padding: 18rpx; border: 1rpx solid #cddfd4; border-radius: 12rpx; background: #fff; }

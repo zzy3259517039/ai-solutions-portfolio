@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>微信 POI 接入实验室 · 商家后台</title>
+  </head>
+  <body>
+    <main class="shell">
+      <span class="eyebrow">WECHAT POI LAB / 商家后台</span>
+      <h1>门店与团购商品</h1>
+      <p class="intro">先建立商家和门店，再添加团购商品。所有金额在数据库中以“分”保存。</p>
+      <section class="status-grid" aria-label="项目状态">
+        <article class="status-card">
+          <span class="label">后端 API</span>
+          <strong id="api-status">检查中…</strong>
+          <small>GET /api/health</small>
+        </article>
+        <article class="status-card">
+          <span class="label">MySQL 数据库</span>
+          <strong id="db-status">检查中…</strong>
+          <small>GET /api/ready</small>
+        </article>
+      </section>
+      <button id="refresh" type="button">重新检查</button>
+      <section class="admin-section">
+        <h2>后台登录</h2>
+        <form id="login-form" class="form-row">
+          <input name="operatorName" placeholder="本次操作人姓名" required maxlength="80" />
+          <input name="password" type="password" placeholder="输入本地管理员密码" required autocomplete="current-password" />
+          <button type="submit">登录</button>
+        </form>
+        <p id="admin-message" class="note" role="status"></p>
+      </section>
+      <section id="admin-panel" class="admin-section" hidden>
+        <h2>商家资料</h2>
+        <form id="merchant-form" class="form-row">
+          <input name="name" placeholder="商家名称" required maxlength="120" />
+          <button type="submit">创建商家</button>
+        </form>
+        <form id="merchant-profile-form" class="form-grid" hidden>
+          <input name="name" placeholder="主体名称" required maxlength="120" />
+          <input name="creditCode" placeholder="统一社会信用代码" maxlength="32" />
+          <input name="legalRepresentative" placeholder="法人姓名" maxlength="80" />
+          <input name="contactPhone" placeholder="商家联系电话" maxlength="32" />
+          <input name="industry" placeholder="经营行业" maxlength="80" />
+          <input name="wechatAppid" placeholder="小程序 AppID（非 Secret）" maxlength="64" />
+          <input name="wechatMchid" placeholder="微信支付商户号 MchID" maxlength="64" />
+          <button type="submit">保存商家资料</button>
+        </form>
+        <h2>门店</h2>
+        <form id="store-form" class="form-grid">
+          <input name="name" placeholder="门店名称" required maxlength="120" />
+          <input name="address" placeholder="门店地址" required maxlength="255" />
+          <button type="submit">创建门店</button>
+        </form>
+        <h2>团购商品</h2>
+        <form id="product-form" class="form-grid">
+          <select name="storeId" id="store-select" required><option value="">选择门店</option></select>
+          <input name="name" placeholder="商品名称" required maxlength="120" />
+          <textarea name="description" placeholder="套餐内容和使用规则" maxlength="2000"></textarea>
+          <input name="originalPrice" placeholder="原价（元，如 69.00）" required inputmode="decimal" />
+          <input name="salePrice" placeholder="团购价（元，如 59.90）" required inputmode="decimal" />
+          <input name="stock" type="number" placeholder="库存" required min="0" step="1" />
+          <input name="validDays" type="number" placeholder="购买后有效天数" required min="1" max="365" step="1" />
+          <select name="status"><option value="DRAFT">草稿</option><option value="ACTIVE">上架</option></select>
+          <button type="submit">创建商品</button>
+        </form>
+        <h2>当前数据</h2>
+        <div id="catalog-list" class="catalog-list"></div>
+        <h2>核销团购券</h2>
+        <p class="note">核对顾客出示的券码、门店和商品后再提交。重复核销会被拒绝。</p>
+        <form id="verify-form" class="form-grid">
+          <select name="storeId" id="verify-store-select" required><option value="">选择核销门店</option></select>
+          <input name="code" placeholder="输入或粘贴 32 位核销券码" required maxlength="32" />
+          <button type="submit">确认核销</button>
+        </form>
+        <h2>撤销误核销</h2>
+        <form id="reverse-form" class="form-grid">
+          <select name="storeId" id="reverse-store-select" required><option value="">选择原核销门店</option></select>
+          <input name="voucherId" type="number" min="1" step="1" placeholder="券 ID" required />
+          <input name="reason" maxlength="255" placeholder="撤销原因" required />
+          <button type="submit">撤销核销</button>
+        </form>
+        <button id="verification-refresh" type="button">查看核销记录</button>
+        <div id="verification-list" class="catalog-list"></div>
+        <h2>退款申请</h2>
+        <p class="note">先核对订单和核销情况，再点击提交微信退款。接口受理后仍需等待微信确认最终结果。</p>
+        <button id="refund-refresh" type="button">刷新退款列表</button>
+        <div id="refund-list" class="catalog-list"></div>
+        <h2>POI 与位置服务实验记录</h2>
+        <p class="note">这里记录在真实微信后台看到的结果。标记完成不会替你取得微信权限或审核。上传截图前先遮盖密钥、手机号和证件信息。</p>
+        <form id="experiment-settings-form" class="form-grid">
+          <select name="storeId" id="experiment-store-select" required><option value="">选择本次实验门店</option></select>
+          <input name="poiName" placeholder="POI 名称" maxlength="120" />
+          <input name="poiAddress" placeholder="POI 地址" maxlength="255" />
+          <select name="poiStatus">
+            <option value="NOT_STARTED">POI 未开始</option><option value="CLAIMING">认领中</option>
+            <option value="SUBMITTED">已提交审核</option><option value="APPROVED">审核通过</option>
+            <option value="BLOCKED">无权限／受阻</option><option value="REJECTED">审核驳回</option>
+          </select>
+          <input name="locationEntry" placeholder="实际找到的位置服务入口" maxlength="120" />
+          <input name="serviceName" value="团购" placeholder="服务名称" maxlength="120" />
+          <select name="reviewStatus">
+            <option value="NOT_SUBMITTED">位置服务未提交</option><option value="PENDING">审核中</option>
+            <option value="APPROVED">审核通过</option><option value="REJECTED">审核驳回</option>
+            <option value="BLOCKED">无权限／受阻</option>
+          </select>
+          <label><input name="merchantConfirmed" type="checkbox" /> 商家已在官方后台确认挂载</label>
+          <button type="submit">保存 POI 与服务资料</button>
+        </form>
+        <p id="experiment-path" class="note">选择门店后生成小程序 Path。</p>
+        <button id="experiment-refresh" type="button">刷新实验清单</button>
+        <div id="experiment-groups"></div>
+      </section>
+      <p class="note">商品展示供开发阶段验证；真实微信登录和支付还需后续验收。</p>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

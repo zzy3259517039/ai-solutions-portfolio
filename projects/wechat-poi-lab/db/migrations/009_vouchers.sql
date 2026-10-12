@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS vouchers (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  order_id BIGINT UNSIGNED NOT NULL,
+  merchant_id BIGINT UNSIGNED NOT NULL,
+  store_id BIGINT UNSIGNED NOT NULL,
+  sequence_no INT UNSIGNED NOT NULL,
+  code CHAR(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  status ENUM('UNUSED', 'USED', 'REFUNDED') NOT NULL DEFAULT 'UNUSED',
+  valid_from DATETIME(3) NOT NULL,
+  valid_until DATETIME(3) NOT NULL,
+  used_at DATETIME(3) NULL,
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  UNIQUE KEY uq_vouchers_order_sequence (order_id, sequence_no),
+  UNIQUE KEY uq_vouchers_code (code),
+  KEY idx_vouchers_store_status (store_id, status),
+  CONSTRAINT fk_vouchers_order FOREIGN KEY (order_id) REFERENCES orders(id),
+  CONSTRAINT fk_vouchers_merchant FOREIGN KEY (merchant_id) REFERENCES merchants(id),
+  CONSTRAINT fk_vouchers_store FOREIGN KEY (store_id) REFERENCES stores(id),
+  CONSTRAINT chk_vouchers_sequence CHECK (sequence_no > 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

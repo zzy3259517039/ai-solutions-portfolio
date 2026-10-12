@@ -1,0 +1,6 @@
+.page { padding: 32rpx; }
+.card { background: white; border-radius: 20rpx; padding: 30rpx; margin-bottom: 24rpx; }
+.title { font-size: 34rpx; font-weight: bold; margin-bottom: 20rpx; }
+.qr { width: 360rpx; display: block; margin: 20rpx auto; }
+.code { text-align: center; font-family: monospace; font-size: 28rpx; word-break: break-all; }
+.hint, .message { color: #6b8179; font-size: 24rpx; margin-top: 20rpx; }

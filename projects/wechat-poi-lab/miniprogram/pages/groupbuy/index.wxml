@@ -1,0 +1,15 @@
+<view class="page">
+  <view class="shop-name">{{storeName}}</view>
+  <view class="shop-address">{{address}}</view>
+  <view wx:if="{{message}}" class="message">{{message}}</view>
+  <view wx:for="{{products}}" wx:key="id" class="product">
+    <view class="product-name">{{item.name}}</view>
+    <view class="description">{{item.description}}</view>
+    <view class="price-row">
+      <text class="price">¥{{item.salePriceYuan}}</text>
+      <text class="original">¥{{item.originalPriceYuan}}</text>
+    </view>
+    <view class="meta">库存 {{item.stock}} · 购买后 {{item.valid_days}} 天有效</view>
+    <button class="buy-button" data-id="{{item.id}}" bindtap="onOpenProduct">查看详情</button>
+  </view>
+</view>

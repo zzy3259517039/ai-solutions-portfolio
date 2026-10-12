@@ -1,0 +1,9 @@
+.page { padding: 32rpx; }
+.card { padding: 36rpx; border-radius: 24rpx; background: #fff; }
+.store { color: #6b8179; font-size: 26rpx; }
+.name { margin-top: 18rpx; font-size: 42rpx; font-weight: bold; }
+.description { margin-top: 28rpx; color: #527068; font-size: 28rpx; line-height: 1.8; white-space: pre-wrap; }
+.price { margin-top: 36rpx; color: #e85a24; font-size: 40rpx; font-weight: bold; }
+.meta { margin-top: 12rpx; color: #6b8179; font-size: 24rpx; }
+.buy { margin-top: 40rpx; background: #087c56; color: white; }
+.message { margin-top: 26rpx; color: #6b8179; font-size: 26rpx; }

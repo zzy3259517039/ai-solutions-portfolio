@@ -1,0 +1,9 @@
+{
+  "description": "邻里果铺：本地模拟交易演示，不用于正式经营",
+  "miniprogramRoot": "miniprogram/",
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "邻里果铺演示",
+  "setting": { "es6": true, "minified": true, "urlCheck": true },
+  "condition": {}
+}

@@ -1,0 +1,11 @@
+<view class="page">
+  <view wx:if="{{product}}" class="card">
+    <view class="store">{{product.store_name}}</view>
+    <view class="name">{{product.name}}</view>
+    <view class="description">{{product.description}}</view>
+    <view class="price">团购价 ¥{{priceYuan}}</view>
+    <view class="meta">剩余 {{product.stock}} 份 · 购买后 {{product.valid_days}} 天有效</view>
+    <button class="buy" bindtap="onBuy" loading="{{busy}}" disabled="{{busy}}">创建订单</button>
+  </view>
+  <view wx:if="{{message}}" class="message">{{message}}</view>
+</view>

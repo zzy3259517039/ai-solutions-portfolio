@@ -1,0 +1,12 @@
+.page { padding: 44rpx 32rpx; }
+.shop-name { font-size: 44rpx; font-weight: bold; }
+.shop-address { margin-top: 14rpx; color: #6b8179; font-size: 26rpx; }
+.message { margin-top: 40rpx; color: #6b8179; font-size: 28rpx; }
+.product { margin-top: 28rpx; padding: 32rpx; border-radius: 24rpx; background: white; }
+.product-name { font-size: 34rpx; font-weight: bold; }
+.description { margin-top: 14rpx; white-space: pre-wrap; color: #527068; font-size: 26rpx; line-height: 1.7; }
+.price-row { display: flex; align-items: baseline; gap: 16rpx; margin-top: 22rpx; }
+.price { color: #e85a24; font-size: 38rpx; font-weight: bold; }
+.original { color: #96a69e; text-decoration: line-through; font-size: 24rpx; }
+.meta { margin-top: 12rpx; color: #6b8179; font-size: 24rpx; }
+.buy-button { margin-top: 24rpx; background: #087c56; color: #fff; font-size: 28rpx; }

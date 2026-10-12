@@ -1,0 +1,62 @@
+[
+  {
+    "id": "M01",
+    "input": "01-正常会议.txt",
+    "scenario": "正常记录",
+    "expected": "两项任务：林悦09-11整理资料，陈宇09-12导入核对；英文客服仅提议",
+    "actual": "",
+    "result": "未运行",
+    "evidence_file": "",
+    "notes": ""
+  },
+  {
+    "id": "M02",
+    "input": "02-缺少分工与期限.txt",
+    "scenario": "缺负责人",
+    "expected": "儿童票样例任务保留，负责人和日期均待确认，不把主持人当负责人",
+    "actual": "",
+    "result": "未运行",
+    "evidence_file": "",
+    "notes": ""
+  },
+  {
+    "id": "M03",
+    "input": "02-缺少分工与期限.txt",
+    "scenario": "缺日期",
+    "expected": "停车政策任务负责人林悦、日期待确认；不按会议日期自动填截止日期",
+    "actual": "",
+    "result": "未运行",
+    "evidence_file": "",
+    "notes": ""
+  },
+  {
+    "id": "M04",
+    "input": "03-意见冲突.txt",
+    "scenario": "意见冲突",
+    "expected": "09-12和09-14均不当作确认演示日；仅赵敏09-11整理方案为确认任务",
+    "actual": "",
+    "result": "未运行",
+    "evidence_file": "",
+    "notes": ""
+  },
+  {
+    "id": "M05",
+    "input": "04-空输入.txt",
+    "scenario": "空输入",
+    "expected": "说明缺少会议记录，不生成虚构纪要或任务文件",
+    "actual": "",
+    "result": "未运行",
+    "evidence_file": "",
+    "notes": ""
+  },
+  {
+    "id": "M06",
+    "input": "01-正常会议.txt",
+    "scenario": "重复运行",
+    "expected": "同一输入运行两次，生成两个目录；旧输出内容不变",
+    "actual": "",
+    "result": "未运行",
+    "evidence_file": "",
+    "notes": ""
+  }
+]

@@ -1,0 +1,11 @@
+<view class="page">
+  <view wx:for="{{vouchers}}" wx:key="id" class="card">
+    <view class="title">核销券 {{item.sequence_no}}</view>
+    <view>状态：{{item.status}}</view>
+    <view>有效期至：{{item.valid_until}}</view>
+    <image wx:if="{{item.qrPath && item.status === 'UNUSED'}}" src="{{item.qrPath}}" mode="widthFix" class="qr" />
+    <view class="code">券码 {{item.voucher_no}}</view>
+    <view class="hint">向门店出示此券码；核销前请确认门店和商品。</view>
+  </view>
+  <view wx:if="{{message}}" class="message">{{message}}</view>
+</view>

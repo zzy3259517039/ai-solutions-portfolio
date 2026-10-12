@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#234d3c"><title>邻里果铺 · 团购演示</title><link rel="stylesheet" href="/web/style.css"><link rel="stylesheet" href="/web/poi-flow.css"></head>
+<body>
+  <header class="topbar"><a class="brand" href="#home"><span class="brand-mark">◒</span><span>邻里果铺<small>NEIGHBORHOOD FRUIT</small></span></a><div class="top-right"><span class="demo-chip">● 互动演示</span><button class="text-button" data-action="help">演示说明 ↗</button></div></header>
+  <div class="workspace"><aside class="intro"><span class="eyebrow">街坊的鲜果小铺</span><h1>新鲜，就在<br>回家的路上<span>。</span></h1><p>把喜欢的鲜果提前选好，<br>路过小店，轻松提走。</p><div class="intro-line"></div><span class="eyebrow">试着走完一次到店提货</span><ol class="steps"><li id="step1"><span>01</span><div>挑一份鲜果<small>套餐规格与价格一目了然</small></div></li><li id="step2"><span>02</span><div>模拟购买，领取提货码<small>没有真实扣款，也不会发货</small></div></li><li id="step3"><span>03</span><div>切换店员，确认核销<small>体验从下单到提货的完整流程</small></div></li></ol><div class="intro-foot">武汉 · 石桥花园周边场景<br><span>虚拟门店 / 本机数据 / 未接入 POI</span></div></aside>
+  <main class="demo-stage"><div class="role-switch" aria-label="演示角色"><button data-action="role" data-role="customer" id="role-customer" class="active">顾客逛店</button><button data-action="role" data-role="merchant" id="role-merchant">店员工作台</button></div><div class="phone"><div class="phone-top"><span>邻里果铺</span><span class="mini-capsule">••• <i></i> ◉</span></div><div class="test-banner">测试体验 · 模拟付款 · 不可用于实际提货</div><div id="app"></div></div><p class="stage-note">可点击操作 · 订单保存在当前浏览器</p></main>
+  </div><div id="toast" role="status" aria-live="polite"></div><div id="modal-root"></div>
+  <script src="/miniprogram/utils/core.js"></script><script src="/web/poi-flow.js"></script><script src="/web/app.js"></script>
+</body></html>

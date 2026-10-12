@@ -1,0 +1,630 @@
+{
+  "packaged_on": "2026-10-12",
+  "purpose": "Source snapshot audit; absolute private paths omitted.",
+  "files": [
+    {
+      "path": "projects/scenic-rag/knowledge/01-票务规则.txt",
+      "source_sha256": "1b98d1ea8054dee2e8658bf20f1d7ee5b9aa135bf37186fada8e47d89d42bcdf"
+    },
+    {
+      "path": "projects/scenic-rag/knowledge/02-开放时间.txt",
+      "source_sha256": "2d1a30b771c5dd892c1c4069cfafec98480856554736cbdf9a26286eefea7593"
+    },
+    {
+      "path": "projects/scenic-rag/knowledge/03-交通停车.txt",
+      "source_sha256": "1f2c215edbfc74890c3ea1444520c2fc61e33b558dbe2c47d5ddbe011d54fb88"
+    },
+    {
+      "path": "projects/scenic-rag/knowledge/04-退改规则.txt",
+      "source_sha256": "6dfc59950f1ab3b88c4f55043903d76870fc12600469dcb03c7780b11c584efe"
+    },
+    {
+      "path": "projects/scenic-rag/knowledge/05-游客服务.txt",
+      "source_sha256": "0859f5d34a32cc39e7b153200537d5df25c0914c51ebe774ba94d90dbc532df8"
+    },
+    {
+      "path": "projects/scenic-rag/prompts/system.txt",
+      "source_sha256": "824731c09c839287d639395eb53311c48cc47062ba48b66bbd6b8943e32dec15"
+    },
+    {
+      "path": "projects/scenic-rag/update-demo/01-票务规则-v2.txt",
+      "source_sha256": "a99e2ed5b685b5a5b4dc517095d0286093a52ef72276d3bf22d527896edbd7cf"
+    },
+    {
+      "path": "projects/scenic-rag/update-demo/QX-TICKET-v2.txt",
+      "source_sha256": "a99e2ed5b685b5a5b4dc517095d0286093a52ef72276d3bf22d527896edbd7cf"
+    },
+    {
+      "path": "projects/scenic-rag/cloud-upload/remaining-knowledge.txt",
+      "source_sha256": "12e47efc2b61bf63c14c4012dfa1109a93a62c3407d170f2a8fc239112b364c6"
+    },
+    {
+      "path": "projects/scenic-rag/qingxi-chatflow.yml",
+      "source_sha256": "b2505df792919a562924bfa690cebca068ebcf2e1dab41c3a5fc53ae144d9247"
+    },
+    {
+      "path": "projects/scenic-rag/test-cases.json",
+      "source_sha256": "d82009d4055c41c89bd29b8dcfb953654739acce7835d129424cabf7cce0b5f9"
+    },
+    {
+      "path": "projects/scenic-rag/SOURCE-NOTES.md",
+      "source_sha256": "db44b2727fa8185ff9d1085e5d6b3cb58dd09b80a1f92bb6554922c36b5aced7"
+    },
+    {
+      "path": "skills/meeting-delivery/references/output-contract.md",
+      "source_sha256": "ec1574e2af5e99700a71a33bf2fb76d33bb171c3e1f0ba658fcb7ddcbb7df6dd"
+    },
+    {
+      "path": "skills/meeting-delivery/scripts/export-meeting.mjs",
+      "source_sha256": "e11f21e698d3127a5d85b340a1e7bd0787ebb2ab202cb75a18da6ff8263ec36d"
+    },
+    {
+      "path": "skills/meeting-delivery/SKILL.md",
+      "source_sha256": "058ab0d8c4238a8489be3f2a93aa4fa1909c121351eeb3fc5a8d56e8138c3716"
+    },
+    {
+      "path": "skills/meeting-delivery/templates/minutes.md",
+      "source_sha256": "3f1c1001d307a2fed5aa3a4446cdeba5503ae0b2dbbd546e5ff62909a0e6a726"
+    },
+    {
+      "path": "skills/meeting-delivery/samples/01-正常会议.txt",
+      "source_sha256": "35d56df36d2ce0a9e39cac86cbee7affb00c420868a587b679fb1a1a84564256"
+    },
+    {
+      "path": "skills/meeting-delivery/samples/02-缺少分工与期限.txt",
+      "source_sha256": "e2c843c472fe6c7c73bddda341414d5555f8c3dca7534e2e2841e8d12b34e2ab"
+    },
+    {
+      "path": "skills/meeting-delivery/samples/03-意见冲突.txt",
+      "source_sha256": "da4b76e6ef2404f04722fc4f474540db6e82d5b88fd1e84bcb361bb68d82fc95"
+    },
+    {
+      "path": "skills/meeting-delivery/samples/04-空输入.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "skills/meeting-delivery/reference/01-reference.json",
+      "source_sha256": "48610d9fe7835a0a6df9e8fa3249a4beadc30d16fc254b9dc0451b5162815d60"
+    },
+    {
+      "path": "skills/meeting-delivery/reference/02-reference.json",
+      "source_sha256": "fa3f6015c5937a27ea8b8011fac579d6948e1a2833da91a4e9ab449c5586f523"
+    },
+    {
+      "path": "skills/meeting-delivery/reference/03-reference.json",
+      "source_sha256": "63a8ae6dcc0ceee7a277c01b9fa0e429818e382741f9e47e2e59f7e406012092"
+    },
+    {
+      "path": "skills/meeting-delivery/reference/说明.txt",
+      "source_sha256": "b690bae812152d21d4b3ed5c0c10f83ab05e41e97153da521ef3485c78df3db7"
+    },
+    {
+      "path": "skills/meeting-delivery/test-cases.json",
+      "source_sha256": "8fe71373f6de681a22514f91af5837e0474a293abe4ccc0b91a8df6dbd0bd316"
+    },
+    {
+      "path": "skills/meeting-delivery/examples/codex-extraction.json",
+      "source_sha256": "770963260292def567259e4e73c3885639a3c844592fadd0284811dfa6f34bc3"
+    },
+    {
+      "path": "skills/meeting-delivery/evidence/local-checks-2026-09-11.json",
+      "source_sha256": "3a6d96a3fa5bb29da328c6f018dcee2963b405cacb2d48a587a4c709db68d7f2"
+    },
+    {
+      "path": "projects/bilibili-monitor/bilibili.py",
+      "source_sha256": "feeb009588e8f076488d1fb30b79b67e9960edcc62b868258d242670d4115855"
+    },
+    {
+      "path": "projects/bilibili-monitor/check_updates.py",
+      "source_sha256": "a15e9732195df9172633b93cb309c538cf51d99621247f1a238db76babc8b3b1"
+    },
+    {
+      "path": "projects/bilibili-monitor/notify.py",
+      "source_sha256": "a36e801db74de92daaf566125e526f6f6d48e1fd20141183e28da97409b4327c"
+    },
+    {
+      "path": "projects/bilibili-monitor/login_bilibili.py",
+      "source_sha256": "27a013e34580fbf82e01cae1b38dd3530f4df529c227a106e588c91ff1e4550d"
+    },
+    {
+      "path": "projects/bilibili-monitor/setup_push.py",
+      "source_sha256": "881421a72819c40702ebbd12c22477fe6801f824ffccd898e669b4013eb86586"
+    },
+    {
+      "path": "projects/bilibili-monitor/test_monitor.py",
+      "source_sha256": "ec0471ffaf33622d2bdf77c706c0c700fab4ddd6847cbadab3076a8e01b12f49"
+    },
+    {
+      "path": "projects/bilibili-monitor/requirements.txt",
+      "source_sha256": "6853c420d038a3db38acd447aad795993f7638e813163da3d6465fe364868d23"
+    },
+    {
+      "path": "projects/bilibili-monitor/install_task.ps1",
+      "source_sha256": "04c850aaca1d2f05e40b19d4782896c633efbbd08d95eca8c106da4d47d19913"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/app.js",
+      "source_sha256": "1ab645c73bcea61604f9cc4805a752ab9ba8fb66813d8c57cad34328c0ce4109"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/app.json",
+      "source_sha256": "ad6329a094ddbe751840a8cca77062227675d1035b25e8067997722e9bf85998"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/app.wxss",
+      "source_sha256": "2c8a0557b990d91b2927002ef389de9d2c02372b74d4fcb860b60e010c803146"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/assets/apple.png",
+      "source_sha256": "60326bd53fee9149264c01b5e97a195768c15b5989baae5b0e47c941aae37746"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/assets/apple.svg",
+      "source_sha256": "0b0d8475111bdc38a1a8c450d38a86afc0a2b5388dd3e60fffe4f53d6da3659a"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/assets/family.png",
+      "source_sha256": "0f38fde3ae2f2ebe75bee173c02e86e3f70fadbdc91dd1bf3d61e34a8e107299"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/assets/family.svg",
+      "source_sha256": "c870c378f4086d407280e4eb7a367fd90653d85059b7651d85b1b40a3992826b"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/assets/orange.png",
+      "source_sha256": "ad76a6db0720b998bf95375b3a6d9bf26cb92c57f65370832fb48bd15fbd5be6"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/assets/orange.svg",
+      "source_sha256": "2c41518465828cfae529e5a1bdeee32549cd1de73bfd7e1c2aa4493cab6f6311"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/pages/index/index.js",
+      "source_sha256": "143402bf9336b73e6858c67a35508baeec9753de7e2e8c6e251fd6af33f0fb2d"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/pages/index/index.json",
+      "source_sha256": "97878800f91b6945ade804c6b67001721d92dec301e8bf3a55364844e061c243"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/pages/index/index.wxml",
+      "source_sha256": "9449f4f666db0d9a7bd6aa3629f84a1cbd4d377621b911f6d72ddf9616064e4d"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/sitemap.json",
+      "source_sha256": "5af2e5f0b9f956776ee88705692efc9d83aaee070fd7a4cfa1326a70b846667b"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/miniprogram/utils/core.js",
+      "source_sha256": "97c0378579a232fef8a8b8b559dddfc69334d1fc5703f4b8a3958ae54fe4c589"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/web/app.js",
+      "source_sha256": "3dd8b1571a8149bc6e2827577cae1c0e0ffb3bb26ca6c2773fe4e535255d35b7"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/web/index.html",
+      "source_sha256": "deb08203f042c8b0b2e3b51f8ec8289ca187dcb88653509c87392322cd1971a2"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/web/poi-flow.css",
+      "source_sha256": "4dcbdc682957e29458035a90cc27c1ad0618715bc75d9e357d69b4269aee93b9"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/web/poi-flow.js",
+      "source_sha256": "0da6f58bfe0577678d8bdab41bd8facd3d10f568cd8b3a64c78f6245fe3af996"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/web/style.css",
+      "source_sha256": "7248cb59d01584eebafa31eeb19dbf96559db3756250f4e261e8864217866ce2"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/tests/core.test.cjs",
+      "source_sha256": "d76fc2218879b848128349a97a9c637cb065d44f4eff9630b54b45c2c2ded544"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/tests/native-adapter.test.cjs",
+      "source_sha256": "515c98ffa2f66eab1f81cdd1b2463be1c05f2a785bc93eb7e7e0a86f27f8b2a9"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/scripts/check-browser.cjs",
+      "source_sha256": "1d8f97d42501cbaaaa8429cfe611890132bf895eb5eef6b25be2b7bbacbb7ef1"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/scripts/check-poi.cjs",
+      "source_sha256": "324518e5769255d871b42c2bd4b9108befd6f6e678508a1775737cd7878bf25c"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/package.json",
+      "source_sha256": "19f01cb14ec4f0d020db6d0f5b2a87bdca86d607ad9a13d278d07e9b7e90fcce"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/project.config.json",
+      "source_sha256": "cf7aa93fc4e9832cbcf7c6b2df27696bc99221b9caff2369383824ae8bcee5a4"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/server.cjs",
+      "source_sha256": "8eccec0d1abe5627a5ef4b64c641eddfb939fe39c2a26cfffc3cd61bd09b9fd3"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/screenshots/01-desktop-home.png",
+      "source_sha256": "7f36eeef2f996f3dbfa93f8fc774580469abda4386ab0532514286e07583afa2"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/screenshots/02-coupon.png",
+      "source_sha256": "1fae2df27298b55453a24d09403e91c553b5619feda3dd6216a6cfc579446518"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/screenshots/03-merchant-redeemed.png",
+      "source_sha256": "3430ad53a584db5fbf7528c94d04992b6c2efd0f4ee87d8f922a9ee3a6556474"
+    },
+    {
+      "path": "projects/fruit-groupbuy-demo/screenshots/04-mobile-home.png",
+      "source_sha256": "e815f6441748c4b6bc3322210b00320fcd96eadeed3cbe7d46800ad2fe4ecec1"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/admin/auth.ts",
+      "source_sha256": "b4c89fd54814d7cd576b9a81ffdd7f988f3fb357924ad0ced7a66cac60ea4ebe"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/app.ts",
+      "source_sha256": "84adb8f706ea5b451b1e3f4d16a54dc91d9c7e20f91ab3181e7c8ba43ee466e8"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/auth/login.ts",
+      "source_sha256": "7f7c745edfb0ca181fbe9b91e9fd37b02f1dd3a1e33b17e4ebfb9ee088cd0d14"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/auth/repository.ts",
+      "source_sha256": "349d703d3c869db543d78940e544a848d916429e09b57f3f73574609309f2c5a"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/auth/user.ts",
+      "source_sha256": "77d406b66572b197e32275fb2b504209abcadc40ce24a8bc03ab4e608b26f938"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/auth/wechat.ts",
+      "source_sha256": "bc920dc43a0a65296550dafe7720d0ca8d4ab198d9eff04790eb73be002fdd29"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/catalog/routes.ts",
+      "source_sha256": "3dc24e4a93fba4452b454b4a1ab089bf7711bf52588dc863e621e18513a38650"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/catalog/validation.ts",
+      "source_sha256": "5f60e27932050049956d5b757ac7a0fde9bd1d83653c323b8bf40bdbccd8a3c5"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/db/connection.ts",
+      "source_sha256": "f97c777fc0b0faf203ad4801e6bee7317bbf23c6b8cd9d6ae01081826f5cdfcc"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/db/migrate.ts",
+      "source_sha256": "a3c823028d85ccc0b5df0dd28dd4b99c9a4a08416cf5b799e57cee0f54365b15"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/experiments/routes.ts",
+      "source_sha256": "981a84796872468639890bdc219c5f1ea1404eb7ab11a691896fed60d315efb6"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/experiments/steps.ts",
+      "source_sha256": "85af582fbfca77cc98d2286ce933a24886123f84c8a660eff245600f2472d672"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/orders/expiry.ts",
+      "source_sha256": "7aeab99559cf8c7b88e3d5f999860b80cf3ae675e4912bc3b09f18063aa21e2d"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/orders/routes.ts",
+      "source_sha256": "4f89c7c8078617f6fb4167328f212be7e33faca71d80299e1ee4816fa4d641bb"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/orders/service.ts",
+      "source_sha256": "828750f13e06a32e36652d25f8d1e7817dc97e02e3ef46bc7615af598485209c"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/payment/client.ts",
+      "source_sha256": "be2e60473924f46134879ab3a02a9495b3f48ae62c371d06a3bed1995701d1f9"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/payment/crypto.ts",
+      "source_sha256": "42e00e59d1f36765a59bcf28e835e86018c3bc36db333e3888665fb4d753452f"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/payment/notification.ts",
+      "source_sha256": "a78173bcf6f52bdef6a20a17ae31cfa11da0ca38138e3c8aaad791b9b288822c"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/payment/prepay.ts",
+      "source_sha256": "6f659480ec2dc240e9485eff31a52ae3faa29ba88a7f746f162ff78d2ba8e1fe"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/refunds/service.ts",
+      "source_sha256": "c45474cef648eab4129dd32e229bdcb0d9139e70d056ae1ed38a778cbf446ffa"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/server.ts",
+      "source_sha256": "6f7cf715b3269a076945c42ed445a4c0d51589e8d703d8b3224a95a949af5943"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/vouchers/service.ts",
+      "source_sha256": "897e8fe268466028d35bd65f24d9785754edf2781d8065bd366df6d385bf8b0a"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/src/vouchers/verify.ts",
+      "source_sha256": "13b68bc0773be635bce9cf776e4c50190e4f475358118746d7f4757c445d6d3d"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/test/app.test.ts",
+      "source_sha256": "feebaf54462899261c49e056b83ee7266261d8da70c98d6dd5ee3f5d6452cfab"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/test/catalog.integration.ts",
+      "source_sha256": "7093cb1fd9d60900b9ad1111a85c112faf375753693ec76d5305b9079b938e4b"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/test/db.integration.ts",
+      "source_sha256": "88ab4c95c9956fbcbc38f1ebcd5d4ab43cee85915d099e11999e1d282ee58d47"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/test/experiments.integration.ts",
+      "source_sha256": "0f8377cd74e334ae5b59d86d3f15b040a9d43c740b4afe4132f7cdf25f312064"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/test/flow.integration.ts",
+      "source_sha256": "a84f886606e8053a3893217d6945ce7e9f61d323ae017eacff13e7be16ef98c0"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/test/login.test.ts",
+      "source_sha256": "a41f597bea56efb53dd631f5d4bcef5061d45a95226d603df50386c8afb2740b"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/test/orders.integration.ts",
+      "source_sha256": "191575f95987720d98d5a66e68520138c60f4b18e87131e80a8a44cbf685c4fe"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/test/payment.test.ts",
+      "source_sha256": "ce7abc1ed21a4a76d57ff407f4c317262e8c4fa631ffd62b427cae4fbda79fe6"
+    },
+    {
+      "path": "projects/wechat-poi-lab/api/tsconfig.json",
+      "source_sha256": "8812e6334043b972d84b5cf4096689818960dbffa7cbf2fc75bc40956bb4abae"
+    },
+    {
+      "path": "projects/wechat-poi-lab/admin/index.html",
+      "source_sha256": "98b03b4dc4337135997b171c03fb9f336bc400fe438242ab3c40e27bc2d2cfc8"
+    },
+    {
+      "path": "projects/wechat-poi-lab/admin/src/main.ts",
+      "source_sha256": "29cf4e18c9cd41148cec24ba8cae7ff7b5f121ab389b8e28106ee1df5dc299f7"
+    },
+    {
+      "path": "projects/wechat-poi-lab/admin/src/style.css",
+      "source_sha256": "40256c882f2bb323f465752a2398e0ab4e9c67981f7c2515a8bf43f013f6adfa"
+    },
+    {
+      "path": "projects/wechat-poi-lab/admin/tsconfig.json",
+      "source_sha256": "cd145ac96d1b16bf906e1a25ebca0bb30caa31282ddd5f4f04702383d94ff78a"
+    },
+    {
+      "path": "projects/wechat-poi-lab/admin/vite.config.ts",
+      "source_sha256": "8e3ef43fa1e9441661391e1ecd3d638c96b3b9ffd6c588d29d96b9ab275dfb0d"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/001_baseline.sql",
+      "source_sha256": "a5d213a54f95009d5961e6fe19558f21a2db3c7cd786bae5fde472a690540b14"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/002_wechat_login.sql",
+      "source_sha256": "101000b7e58b18d93c3d7dbb94a633a7d0554169d76e7b8acee6d5991f62dc2a"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/003_user_sessions.sql",
+      "source_sha256": "df8d9fb30b62189a58eb725f29bbf0a72086d1ff3e089cd5d6f23215ad750773"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/004_admin_sessions.sql",
+      "source_sha256": "33e328bc434cb2b87f2f5051b39371bc4f10e2bc66e36f5741a42410dcd4bc9b"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/005_merchants.sql",
+      "source_sha256": "cc654a91706abc8b65699bcbf4942b25cd12c4d8d806ca12672e43b51f99e346"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/006_stores.sql",
+      "source_sha256": "08f0cdc39600c1e067a15a3ae370e06ef85f5506ded710e0ffcffba087b20379"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/007_products.sql",
+      "source_sha256": "28a9ab8ec58582a6f18074c6cda65ec5fe9f0046bf7384f910a04d47c0ae10bd"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/008_orders.sql",
+      "source_sha256": "1e29a9007d0e8c08954df98d710e3a8dfa0e41fea9b25d46b5ea9d4af1c00da0"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/009_vouchers.sql",
+      "source_sha256": "666068d7ab6deca70b9e3da9dcc53c1f669f4abfaf31544c2cc4636ea20dde73"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/010_voucher_verifications.sql",
+      "source_sha256": "ffd793ea9fb3a2eb638b03bd2b5d7592cd5f69ef95c97cc27023b73fb229d7b9"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/011_refunds.sql",
+      "source_sha256": "054355a2a6f754acf91d84037e141cff58d7a40a1bafa3ca33f3686d7255b498"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/012_voucher_numbers.sql",
+      "source_sha256": "6c11dadcd03b6558ac9b7c6efd0c34d2a5bb05f24cbfd378beacb1234ab0b5b8"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/013_voucher_expiry.sql",
+      "source_sha256": "636ec42017550f19397d05f17fc13fcff6d43a889e685c052befb41469901c2d"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/014_experiment_steps.sql",
+      "source_sha256": "00d590f609805a537c58816590594b72556f067732cff861b393c193485c6a5b"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/015_experiment_settings.sql",
+      "source_sha256": "f9875b8be1bcd51a175254b497ddd906741baab3715961a68a1ece21e487aa0b"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/016_merchant_profile.sql",
+      "source_sha256": "067cdf5b23a7e186a54cbab59e72551389246f47f01b13323498b18b17152640"
+    },
+    {
+      "path": "projects/wechat-poi-lab/db/migrations/017_admin_operator.sql",
+      "source_sha256": "0b88b34f7e5d0a842f229c1bf313a729d6ae34cb13712ad4b647f1b3a4a5200f"
+    },
+    {
+      "path": "projects/wechat-poi-lab/deploy/ecosystem.config.cjs",
+      "source_sha256": "90fa7def570b11e49cc05a06a7bfe679eae7de24baebe8ace93a94c1dc12832e"
+    },
+    {
+      "path": "projects/wechat-poi-lab/deploy/nginx.example.conf",
+      "source_sha256": "0f3c03e1acde06dc05495d1015afd8ae7ab13b5272559f0d70595e930e043fdd"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/app.json",
+      "source_sha256": "e88761b1f67a41d3ce6e917dbd4bbb7e3e0f8681d55c597566a777abcffb44e9"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/app.ts",
+      "source_sha256": "1ab645c73bcea61604f9cc4805a752ab9ba8fb66813d8c57cad34328c0ce4109"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/app.wxss",
+      "source_sha256": "1d05af6a76ed63e332a0c9ae80697429a4a2ae7523ca1d1565a3fcba4a2dff62"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/config.ts",
+      "source_sha256": "bd35accd00cd5e7987281c65421c663b5a1fb03200a335d10a0a6ac7e62f1438"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/groupbuy/index.json",
+      "source_sha256": "0903aca36996d907f892ede04934e053f3f41df7e0c87873b9b38d0726a26c7f"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/groupbuy/index.ts",
+      "source_sha256": "0a4efbdc3d5716aaa1158c4594246889be31b0fbadc81673218e5c67386e2ba4"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/groupbuy/index.wxml",
+      "source_sha256": "6cedb05268fe66af4e99132cfbc81dd6680efdad3541ee870636fcbd3c37a0b3"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/groupbuy/index.wxss",
+      "source_sha256": "a1ce1007a858eec499981e138b79396a7ec66c3aa395703f19ec64db50d53138"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/index/index.json",
+      "source_sha256": "879eb9ec778518654be5108b6f262217c65d520fc1ec591aa555d712b93adcd3"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/index/index.ts",
+      "source_sha256": "2a19cf64102078c284018c3cc06af061567660cba5876022b3a584fa7eb7dcfc"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/index/index.wxml",
+      "source_sha256": "62db55ead2ef36f0a57ec20369cf4453e213e7ccf5093fc7becbf0f989411ff7"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/index/index.wxss",
+      "source_sha256": "0b8d9c24711819bbed6a6758d5d5794fe191bdf09f7c0c975bd3e27a662878eb"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/order/confirm.json",
+      "source_sha256": "f2e9b387be7f1ee7b748dbc1c6193100374aa686029b682bec1d8a1a729f331f"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/order/confirm.ts",
+      "source_sha256": "95f1da062bf337550a8851d51e5712f960fa4344c93e355b22db81ccf18444bf"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/order/confirm.wxml",
+      "source_sha256": "1995bb9aefed026bd6745f4da0d76a7fd4546e2be1f80c0415118d2b5a997c97"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/order/confirm.wxss",
+      "source_sha256": "d37d56b0af9e33621ee2743441fd3d2aa50172c54f18f9e4760081281af97b0a"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/orders/index.json",
+      "source_sha256": "2b5afafc9d19a4052c024717ffb4f2e4931857c250843a456f7e9721b1562993"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/orders/index.ts",
+      "source_sha256": "061677f4a4227217067fa2fb8e5b4939d62fea25586792ef8f489607309a10bb"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/orders/index.wxml",
+      "source_sha256": "8fcb0e100497377f2eac44b12e61895cd9a50d4bee4587631dd586bf5901b9c2"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/orders/index.wxss",
+      "source_sha256": "336c1f6edb7b767bec90a63276b3994cdd297efba3e77fc1be1a31bde5296c1d"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/product/detail.json",
+      "source_sha256": "3388798c3c5cf69095b95f0cf6c2e04f67b8b10a03d7f54dc7fae205452a5f37"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/product/detail.ts",
+      "source_sha256": "432b4a3525737bf34d10af6383354ea1ba7e2e3e8343f34032d697a098832734"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/product/detail.wxml",
+      "source_sha256": "ea6808809764f81d60ffab6cbded94bcd483d793e26dcdb9067fa22d4fbd3b01"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/product/detail.wxss",
+      "source_sha256": "2bf0ba9cb4ea3e3778d0201d92474d139fc56811ecf460591aed30d0effb82f8"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/vouchers/index.json",
+      "source_sha256": "5a726fe241e4b73359d9b9e0e7e8fa6b2abf2683b5435c67369730eb45bf6339"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/vouchers/index.ts",
+      "source_sha256": "ccb75ff0b720cce816e139a4ed620d148bf167f220ee3770abbde3d0c019db1f"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/vouchers/index.wxml",
+      "source_sha256": "cb73f298870b1fdf5b4e5dd322dd8bcf45a27f65a07c3d0d62ed1ad81ab8c7bf"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/pages/vouchers/index.wxss",
+      "source_sha256": "ec0e038eb7a511dea35c68ae6bc3b9fa37a7aa5ce8e31804c77b8926122d9e17"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/tsconfig.json",
+      "source_sha256": "776de098c3050dd3c27ad82b379bc50173907d7a4a922217b2539d222bb09b1a"
+    },
+    {
+      "path": "projects/wechat-poi-lab/miniprogram/types.d.ts",
+      "source_sha256": "6230ae6fdce6e2945e5eb2b62e7bcf889b5d6fcc3e8214e86b8b858e9da64aab"
+    },
+    {
+      "path": "projects/wechat-poi-lab/scripts/prepare-local-db.mjs",
+      "source_sha256": "bb8f3142ccf566fc3807c9282881979614533c742b15f635996469a55dd1f4e9"
+    },
+    {
+      "path": "projects/wechat-poi-lab/package.json",
+      "source_sha256": "5df31aaa47a9b4928421db6c48357a255e6e9fd8679400a453ff78654105831d"
+    },
+    {
+      "path": "projects/wechat-poi-lab/package-lock.json",
+      "source_sha256": "97ae2ddb08978d82ed76b49e40d34072deed46af4ebc4620283b4759a7e7a8bb"
+    },
+    {
+      "path": "projects/wechat-poi-lab/project.config.json",
+      "source_sha256": "b7f802be02eaeadce15926827e117b8fda7c27123ab0aa15e267f535570a2067"
+    },
+    {
+      "path": "projects/wechat-poi-lab/.env.example",
+      "source_sha256": "303d1f9f26ba98c0dc8d76584091b98191941376c77e7aa0d7a150532472f6b4"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="badge">微信团购小程序</view>
+  <view class="title">{{title}}</view>
+  <view class="subtitle">{{subtitle}}</view>
+  <view class="card">
+    <view class="card-title">微信登录实验</view>
+    <view class="card-text">小程序调用 wx.login，后端向微信换取 openid，并保存最小用户记录。</view>
+    <button class="login-button" bindtap="onLoginTap" loading="{{loading}}" disabled="{{loading}}">获取我的 OpenID</button>
+    <view class="login-status">{{status}}</view>
+    <view wx:if="{{openid}}" class="openid">OpenID：{{openid}}</view>
+    <view class="card-text">需要真实小程序 AppID、Secret 和本地数据库账号才能完成真实验收。</view>
+  </view>
+  <view class="card">
+    <view class="card-title">查看门店团购</view>
+    <view class="card-text">在管理后台创建门店后，输入它的 ID 查看商品。</view>
+    <input class="store-input" type="number" placeholder="门店 ID" bindinput="onStoreIdInput" />
+    <button class="login-button" bindtap="onOpenStore">打开门店</button>
+  </view>
+  <button class="login-button" bindtap="onMyOrders">我的订单</button>
+</view>

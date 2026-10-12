@@ -1,0 +1,50 @@
+<view class="role-switch"><button class="{{role==='customer'?'active':''}}" data-role="customer" bindtap="setRole">顾客逛店</button><button class="{{role==='merchant'?'active':''}}" data-role="merchant" bindtap="setRole">店员工作台</button></view>
+<view class="test-banner">测试体验 · 模拟付款 · 不可用于实际提货</view>
+<block wx:if="{{role==='customer'}}">
+  <block wx:if="{{view==='home'}}">
+    <view class="hero"><text class="eyebrow">FRESH PICKS · 邻里鲜选</text><view class="hero-title"><view>今天的鲜甜，</view><view>给生活加点料。</view></view><text class="hero-sub">线上选好 · 到店轻松提</text><image class="hero-art" src="/assets/family.png" mode="aspectFit"/><text class="hero-pill">一份新鲜，一份日常的小确幸</text></view>
+    <view class="store-strip"><view><text class="store-name">⌖ 石桥花园周边 · 演示门店</text><text class="muted small block">虚拟门店，不提供真实提货服务</text></view><text class="badge">到店自提</text></view>
+    <view class="section-head"><text class="section-title">今日鲜选</text><text class="muted small">固定规格 · 简单好选</text></view>
+    <view class="filters"><button wx:for="{{categories}}" wx:key="*this" class="{{category===item?'active':''}}" data-value="{{item}}" bindtap="setCategory">{{item}}</button></view>
+    <view class="product-list"><view wx:for="{{products}}" wx:key="id" class="product-card" data-id="{{item.id}}" bindtap="detail"><image class="product-art" style="background:{{item.color}}" src="/assets/{{item.art}}.png" mode="aspectFit"/><view class="product-copy"><text class="tag">{{item.tag}}</text><view class="product-name">{{item.shortName}}</view><text class="small muted">{{item.subtitle}}</text><view class="price-row"><text class="price"><text class="yen">¥</text>{{item.priceText}}<text class="price-note">演示价</text></text><text class="round-plus">+</text></view></view></view><view class="footnote">商品、插画、库存和价格均用于演示</view></view>
+  </block>
+  <block wx:elif="{{view==='detail' && product}}">
+    <view class="screen-head"><button data-view="home" bindtap="go">‹ 返回</button><text>套餐详情</text></view>
+    <view class="detail-art" style="background:{{product.color}}"><image src="/assets/{{product.art}}.png" mode="aspectFit"/><text>商品插画 · 仅供演示</text></view>
+    <view class="detail-title"><text class="badge">{{product.tag}} / 到店自提</text><view class="large-title">{{product.name}}</view><text class="muted">{{product.shortName}}</text><view class="price-row"><text class="price">¥{{product.priceText}}<text class="price-note">演示价</text></text><text class="small muted">测试库存 {{product.stock}} 份</text></view></view>
+    <view class="card"><view class="card-title">这一份里，有什么</view><view wx:for="{{product.items}}" wx:key="*this" class="rule">· {{item}}</view><view class="rule">{{product.description}}</view></view>
+    <view class="card"><view class="card-title">购买与提货须知</view><view class="rule">· 一单一份，一张券一次性提货。</view><view class="rule">· 模拟购买后有效期 7 天，仅当前虚拟门店适用。</view><view class="rule">· 不含配送。未使用且未过期可模拟退款。</view><view class="rule">· 不会扣款，不提供真实商品。</view></view>
+    <view class="buy-bar"><text class="price">¥{{product.priceText}}</text><button class="primary" disabled="{{product.stock===0}}" bindtap="checkout">{{product.stock===0?'已售罄':'选这份 · 模拟购买'}}</button></view>
+  </block>
+  <block wx:elif="{{view==='checkout' && product}}">
+    <view class="screen-head"><button data-view="detail" bindtap="go">‹ 返回</button><text>确认测试订单</text></view>
+    <view class="card summary-product"><image src="/assets/{{product.art}}.png" mode="aspectFit"/><view><view class="card-title">{{product.shortName}}</view><text class="muted small">固定规格 / 数量 × 1</text><view class="rule">¥{{product.priceText}}</view></view></view>
+    <view class="card"><view class="card-title">⌖ 到店自提</view><view class="rule">邻里果铺 · 虚拟演示门店</view><view class="rule">武汉 · 石桥花园周边场景</view><view class="rule">此处不是实际提货地址</view></view>
+    <view class="card"><view class="row"><text>模拟应付</text><text class="price">¥{{product.priceText}}</text></view><view class="row"><text>实际扣款</text><text>¥0.00</text></view></view>
+    <view class="notice">本次使用模拟支付，不会调用微信支付，不会产生真实交易。</view>
+    <checkbox-group bindchange="agreement"><label class="agree"><checkbox value="agree" checked="{{agreed}}" color="#244e3e"/><text>我已了解套餐规格、7 天有效期和模拟退款规则，知道订单仅供演示。</text></label></checkbox-group>
+    <view class="padded"><button class="primary" disabled="{{!agreed || busy}}" loading="{{busy}}" bindtap="pay">确认模拟支付 · 不扣款</button></view>
+  </block>
+  <block wx:elif="{{view==='coupon' && order}}">
+    <view class="screen-head"><button data-view="orders" bindtap="go">‹ 返回</button><text>我的提货券</text></view>
+    <view class="success-head"><view class="success-icon">✓</view><view class="large-title">{{order.status==='unused'?'鲜果已选好，等你来提':order.statusLabel}}</view><view class="muted small">测试订单 · 实际扣款 ¥0.00</view></view>
+    <view class="ticket"><text class="badge">{{order.statusLabel}}</text><view class="card-title ticket-title">{{order.name}}</view><view class="rule">邻里果铺 · 一份 / 一次核销</view><view class="divider"></view><text class="muted small">测试提货码</text><view class="ticket-code">{{order.codeText}}</view><view class="rule">有效期至 {{order.expiryText}}</view><view class="actions"><button class="secondary" bindtap="copy">复制测试码</button><button wx:if="{{order.canRefund}}" class="secondary" bindtap="refund">模拟退款</button></view><view class="divider"></view><view class="rule">模拟支付 ¥{{order.priceText}}</view><view class="small muted">订单编号 {{order.id}}</view></view>
+    <view class="padded"><button wx:if="{{order.canRedeem}}" class="primary" bindtap="handoff">试试店员核销 →</button><button wx:else class="primary" data-view="home" bindtap="go">继续逛果铺</button><view class="footnote">演示快捷切换，测试码会自动填入工作台</view></view>
+  </block>
+  <block wx:elif="{{view==='orders'}}">
+    <view class="screen-head"><button data-view="home" bindtap="go">‹ 返回</button><text>我的提货券</text></view>
+    <view wx:if="{{orders.length===0}}" class="empty"><view class="empty-icon">◒</view><view class="card-title">第一份鲜果，等你来挑</view><view class="rule">模拟购买后，提货券就会出现在这里。</view><button class="primary" data-view="home" bindtap="go">去选鲜果</button></view>
+    <view wx:for="{{orders}}" wx:key="id" class="card"><view class="row"><text class="small muted">{{item.createdText}}</text><text class="badge">{{item.statusLabel}}</text></view><view class="card-title">{{item.name}}</view><view class="rule">固定规格 × 1 · 模拟支付</view><view class="row"><text class="price">¥{{item.priceText}}</text><button class="secondary compact" data-id="{{item.id}}" bindtap="openCoupon">查看提货券</button></view></view>
+  </block>
+  <view wx:if="{{view==='home' || view==='orders'}}" class="bottom-nav"><button class="{{view==='home'?'selected':''}}" data-view="home" bindtap="go">◒<text>逛果铺</text></button><button class="{{view==='orders'?'selected':''}}" data-view="orders" bindtap="go">▤<text>我的提货券</text></button><button bindtap="help">ⓘ<text>演示说明</text></button></view>
+</block>
+<block wx:else>
+  <view class="merchant-head"><text class="eyebrow">STORE WORKSPACE</text><view class="large-title">今天，也要好好交付。</view><text class="muted small">邻里果铺 · 店员演示工作台</text></view>
+  <view class="stats"><view><text>{{stats.unused}}</text><text class="small">待提货</text></view><view><text>{{stats.redeemed}}</text><text class="small">已核销</text></view><view><text>{{stats.total}}</text><text class="small">测试订单</text></view></view>
+  <view class="card"><view class="card-title">输入提货码，核对这一单</view><view class="rule">先查询套餐和状态，确认交付内容后再核销。</view><input class="code-input" type="number" maxlength="8" placeholder="输入 8 位测试提货码" value="{{code}}" bindinput="codeInput"/><button class="primary" bindtap="query">查询测试券</button><view wx:if="{{error}}" class="error">{{error}}</view><view wx:if="{{lookup}}"><view class="divider"></view><text class="badge">{{lookup.statusLabel}}</text><view class="card-title ticket-title">{{lookup.name}}</view><view wx:for="{{lookup.items}}" wx:key="*this" class="rule">{{item}}</view><view class="rule">测试码 {{lookup.codeText}}</view><view class="rule">有效期至 {{lookup.expiryText}}</view><button wx:if="{{lookup.canRedeem}}" class="primary spaced" bindtap="redeem">核对无误 · 确认核销</button><view wx:else class="error">此测试券{{lookup.statusLabel}}，不能核销。</view></view></view>
+  <view class="section-head"><text class="card-title">待提货清单 {{pending.length}}</text></view>
+  <view wx:for="{{pending}}" wx:key="id" class="card row" data-code="{{item.code}}" bindtap="selectCode"><view><view class="card-title">{{item.name}}</view><text class="small muted">测试码 {{item.codeText}}</text></view><text>核对 →</text></view>
+  <view wx:if="{{pending.length===0}}" class="footnote">还没有待提货订单，切换顾客逛店试着购买。</view>
+  <view class="footnote"><view>本机数据，不支持跨设备同步。</view><view>角色切换仅用于演示，不是员工身份认证。</view></view>
+  <view class="actions padded"><button class="secondary" bindtap="help">演示说明</button><button class="secondary" bindtap="reset">重置测试数据</button></view>
+</block>

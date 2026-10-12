@@ -1,0 +1,9 @@
+{
+  "pages": ["pages/index/index", "pages/groupbuy/index", "pages/product/detail", "pages/order/confirm", "pages/vouchers/index", "pages/orders/index"],
+  "window": {
+    "navigationBarTitleText": "POI 接入实验室",
+    "navigationBarBackgroundColor": "#f4f8f5",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f4f8f5"
+  }
+}

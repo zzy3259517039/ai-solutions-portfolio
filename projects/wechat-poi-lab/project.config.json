@@ -1,0 +1,14 @@
+{
+  "description": "微信 POI 接入实验室原生小程序",
+  "miniprogramRoot": "miniprogram/",
+  "appid": "touristappid",
+  "setting": {
+    "es6": true,
+    "postcss": true,
+    "minified": false,
+    "useCompilerPlugins": [
+      "typescript"
+    ]
+  },
+  "compileType": "miniprogram"
+}

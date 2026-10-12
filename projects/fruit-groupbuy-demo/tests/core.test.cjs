@@ -1,0 +1,10 @@
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const core = require('../miniprogram/utils/core.js');
+function fixture() { let t=Date.UTC(2026,8,29); const data={}; const storage={get:k=>data[k],set:(k,v)=>data[k]=v}; return { app:core.create(storage,()=>t), storage, advance:()=>t+=8*86400000 }; }
+test('重复购买请求只出一张券，价格来自目录，库存仅扣一次',()=>{ const {app}=fixture(); const a=app.purchase('family','r1'); const b=app.purchase('family','r1'); assert.equal(a.id,b.id); assert.equal(a.price,2990); assert.equal(app.orders().length,1); assert.equal(app.product('family').stock,19); assert.throws(()=>app.purchase('apple','r1')); });
+test('库存为零后禁止购买，不能产生负库存',()=>{ const {app}=fixture(); for(let i=0;i<15;i++)app.purchase('apple','r'+i); assert.throws(()=>app.purchase('apple','extra'),/售罄/); assert.equal(app.product('apple').stock,0); });
+test('核销只能成功一次，核销后不可退款',()=>{ const {app}=fixture(); const a=app.purchase('orange','r'); assert.equal(app.redeem(a.code).status,'redeemed'); assert.throws(()=>app.redeem(a.code),/已经核销/); assert.throws(()=>app.refund(a.id),/仅待提货/); });
+test('退款后恢复一次库存，券不能核销或再次退款',()=>{ const {app}=fixture(); const a=app.purchase('family','r'); app.refund(a.id); assert.equal(app.product('family').stock,20); assert.throws(()=>app.refund(a.id)); assert.equal(app.product('family').stock,20); assert.throws(()=>app.redeem(a.code),/已模拟退款/); });
+test('过期判断不依赖后台定时任务',()=>{ const {app,advance}=fixture(); const a=app.purchase('family','r'); advance(); assert.equal(app.order(a.id).status,'expired'); assert.throws(()=>app.redeem(a.code),/过期/); assert.throws(()=>app.refund(a.id)); });
+test('本地持久化、无效提货码及重置',()=>{ const {app,storage}=fixture(); const a=app.purchase('family','r'); const second=core.create(storage,()=>a.createdAt); assert.equal(second.lookup(a.code).id,a.id); assert.throws(()=>second.lookup('bad'),/8 位/); assert.throws(()=>second.lookup('00000000'),/未找到/); second.reset(); assert.equal(app.orders().length,0); assert.equal(app.product('family').stock,20); });

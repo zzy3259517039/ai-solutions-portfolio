@@ -1,0 +1,5 @@
+.page { padding: 32rpx; }
+.card { background: white; border-radius: 20rpx; padding: 30rpx; margin-bottom: 22rpx; font-size: 26rpx; line-height: 1.8; }
+.title { font-size: 34rpx; font-weight: bold; }
+.open { color: #087c56; margin-top: 14rpx; }
+.message { color: #6b8179; }
